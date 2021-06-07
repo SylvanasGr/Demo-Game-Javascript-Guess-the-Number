@@ -13,7 +13,7 @@ const displayMessage = function (message){
 
 
 document.querySelector('.check').addEventListener('click',function(){
-const guess =  Number(document.querySelector('.guess').value);
+let guess =  Number(document.querySelector('.guess').value);
 console.log(guess,typeof guess);
 
 //When there is no input
@@ -48,7 +48,7 @@ if (guess > 21 || guess < 1) {
 
 // again - reset the score,background etc...
 document.querySelector('.again').addEventListener('click',function(){
- 
+  guess =  Number(document.querySelector('.guess').value); 
  const guess =  document.querySelector('.guess').value='';
  console.log(guess,typeof guess);
  document.querySelector('.score').textContent = 20;
